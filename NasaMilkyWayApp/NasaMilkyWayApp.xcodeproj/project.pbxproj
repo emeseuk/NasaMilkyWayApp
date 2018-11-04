@@ -15,6 +15,8 @@
 		E0711F55218FB1A600428134 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0711F53218FB1A600428134 /* LaunchScreen.storyboard */; };
 		E0711F5E218FB2F900428134 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711F5D218FB2F900428134 /* NetworkManager.swift */; };
 		E0711F60218FB32800428134 /* NasaResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711F5F218FB32800428134 /* NasaResponseObject.swift */; };
+		E0711F63218FB50900428134 /* MilkyWayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711F62218FB50900428134 /* MilkyWayTableViewController.swift */; };
+		E0711F65218FB57D00428134 /* MilkyWayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711F64218FB57D00428134 /* MilkyWayTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		E0711F56218FB1A600428134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0711F5D218FB2F900428134 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E0711F5F218FB32800428134 /* NasaResponseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaResponseObject.swift; sourceTree = "<group>"; };
+		E0711F62218FB50900428134 /* MilkyWayTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilkyWayTableViewController.swift; sourceTree = "<group>"; };
+		E0711F64218FB57D00428134 /* MilkyWayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilkyWayTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 		E0711F49218FB1A500428134 /* NasaMilkyWayApp */ = {
 			isa = PBXGroup;
 			children = (
+				E0711F61218FB4C400428134 /* MainScreen */,
 				E0711F5C218FB2D200428134 /* Network */,
 				E0711F4A218FB1A500428134 /* AppDelegate.swift */,
 				E0711F4C218FB1A600428134 /* ViewController.swift */,
@@ -100,6 +105,15 @@
 				E0711F5F218FB32800428134 /* NasaResponseObject.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		E0711F61218FB4C400428134 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E0711F62218FB50900428134 /* MilkyWayTableViewController.swift */,
+				E0711F64218FB57D00428134 /* MilkyWayTableViewCell.swift */,
+			);
+			path = MainScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,7 +238,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0711F63218FB50900428134 /* MilkyWayTableViewController.swift in Sources */,
 				E0711F60218FB32800428134 /* NasaResponseObject.swift in Sources */,
+				E0711F65218FB57D00428134 /* MilkyWayTableViewCell.swift in Sources */,
 				E0711F5E218FB2F900428134 /* NetworkManager.swift in Sources */,
 				E0711F4D218FB1A600428134 /* ViewController.swift in Sources */,
 				E0711F4B218FB1A500428134 /* AppDelegate.swift in Sources */,
