@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mOG-Ku-1pF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rh4-o2-dL5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,20 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NasaMilkyWayApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
         <!--THE MILKY WAY-->
         <scene sceneID="wzr-is-a3p">
             <objects>
@@ -98,6 +84,7 @@
                                     <outlet property="milkyWayView" destination="hLm-7Q-Q1r" id="BRP-mR-DK3"/>
                                     <outlet property="thumbnailImageView" destination="wIV-4n-AM8" id="Wfy-Rk-aGy"/>
                                     <outlet property="titleLabel" destination="aOk-Hq-Xxx" id="3Iu-d3-4zz"/>
+                                    <segue destination="MiK-9V-RAU" kind="show" identifier="showMilkyWayDetail" id="Ks3-DY-r0W"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -116,7 +103,124 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u97-Xh-yh7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1750" y="16"/>
+            <point key="canvasLocation" x="2688.8000000000002" y="15.742128935532236"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bmg-Ux-Ix9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rh4-o2-dL5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Oaa-ZD-Lua">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mOG-Ku-1pF" kind="relationship" relationship="rootViewController" id="Y2U-jF-Cfw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zvs-lu-db8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1749.5999999999999" y="15.742128935532236"/>
+        </scene>
+        <!--Milky Way Detail View Controller-->
+        <scene sceneID="v2U-sk-to4">
+            <objects>
+                <viewController id="MiK-9V-RAU" customClass="MilkyWayDetailViewController" customModule="NasaMilkyWayApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hnC-NF-hpF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1r5-fX-ZdW">
+                                <rect key="frame" x="0.0" y="64" width="375" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="OPZ-64-N7Y">
+                                        <variation key="heightClass=compact" constant="100"/>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yad-tw-72Z">
+                                <rect key="frame" x="15" y="294" width="345" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7oU-SD-pie">
+                                <rect key="frame" x="15" y="338" width="345" height="39"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bdq-Y4-V1z">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="19.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Center: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USb-H1-4xX">
+                                                <rect key="frame" x="0.0" y="0.0" width="305.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60y-4a-FGG">
+                                                <rect key="frame" x="305.5" y="0.0" width="39.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q8J-4V-el1">
+                                        <rect key="frame" x="0.0" y="19.5" width="345" height="19.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Date Created: " textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PhK-x6-YAP">
+                                                <rect key="frame" x="0.0" y="0.0" width="305.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPf-fa-DfH">
+                                                <rect key="frame" x="305.5" y="0.0" width="39.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XaY-RK-LDj">
+                                <rect key="frame" x="15" y="397" width="345" height="260"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kUa-7V-zJc" firstAttribute="trailing" secondItem="XaY-RK-LDj" secondAttribute="trailing" constant="15" id="0zw-QL-hpt"/>
+                            <constraint firstItem="7oU-SD-pie" firstAttribute="leading" secondItem="kUa-7V-zJc" secondAttribute="leading" constant="15" id="6F5-kp-XJd"/>
+                            <constraint firstItem="1r5-fX-ZdW" firstAttribute="leading" secondItem="kUa-7V-zJc" secondAttribute="leading" id="ELa-lw-HxY"/>
+                            <constraint firstItem="kUa-7V-zJc" firstAttribute="trailing" secondItem="Yad-tw-72Z" secondAttribute="trailing" constant="15" id="GnP-a9-LZu"/>
+                            <constraint firstItem="Yad-tw-72Z" firstAttribute="leading" secondItem="kUa-7V-zJc" secondAttribute="leading" constant="15" id="Lnc-3Q-RWG"/>
+                            <constraint firstItem="XaY-RK-LDj" firstAttribute="top" secondItem="7oU-SD-pie" secondAttribute="bottom" constant="20" id="RRV-OE-Nrz"/>
+                            <constraint firstItem="7oU-SD-pie" firstAttribute="top" secondItem="Yad-tw-72Z" secondAttribute="bottom" constant="20" id="Sz5-dO-vy4"/>
+                            <constraint firstItem="Yad-tw-72Z" firstAttribute="top" secondItem="1r5-fX-ZdW" secondAttribute="bottom" constant="30" id="U41-4M-xT1"/>
+                            <constraint firstItem="kUa-7V-zJc" firstAttribute="bottom" secondItem="XaY-RK-LDj" secondAttribute="bottom" constant="10" id="UkF-Pe-kaU"/>
+                            <constraint firstItem="1r5-fX-ZdW" firstAttribute="top" secondItem="kUa-7V-zJc" secondAttribute="top" id="j4A-is-PEj"/>
+                            <constraint firstItem="1r5-fX-ZdW" firstAttribute="trailing" secondItem="kUa-7V-zJc" secondAttribute="trailing" id="lLU-4d-HhM"/>
+                            <constraint firstItem="XaY-RK-LDj" firstAttribute="leading" secondItem="kUa-7V-zJc" secondAttribute="leading" constant="15" id="m80-xq-Ga4"/>
+                            <constraint firstItem="kUa-7V-zJc" firstAttribute="trailing" secondItem="7oU-SD-pie" secondAttribute="trailing" constant="15" id="sM4-za-FUh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kUa-7V-zJc"/>
+                    </view>
+                    <connections>
+                        <outlet property="milkyWayCenter" destination="60y-4a-FGG" id="dp1-SI-eQ5"/>
+                        <outlet property="milkyWayDate" destination="QPf-fa-DfH" id="kBe-me-pwB"/>
+                        <outlet property="milkyWayDescription" destination="XaY-RK-LDj" id="eDJ-5T-Z9F"/>
+                        <outlet property="milkyWayImage" destination="1r5-fX-ZdW" id="c6y-KJ-eyD"/>
+                        <outlet property="milkyWayTitle" destination="Yad-tw-72Z" id="z4Q-eA-QOh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ude-j1-uOy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3570" y="16"/>
         </scene>
     </scenes>
 </document>

@@ -55,6 +55,19 @@ class MilkyWayTableViewController: UITableViewController {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMilkyWayDetail" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let destinationController = segue.destination as! MilkyWayDetailViewController
+                destinationController.detailImageUrl = data[indexPath.row].imageUrl
+                destinationController.detailTitle = data[indexPath.row].title
+                destinationController.detailCenter = data[indexPath.row].center
+                destinationController.detailDate = data[indexPath.row].date
+                destinationController.detailDescription = data[indexPath.row].description
+            }
+        }
+    }
+    
     func displayNoInternetAlert(){
         let alertController = UIAlertController(title: "No Internet", message: "It appears that your iPhone is not connected to internet.", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in

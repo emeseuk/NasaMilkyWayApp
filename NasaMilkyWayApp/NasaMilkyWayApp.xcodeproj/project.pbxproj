@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1A75EA95B84D4C2492B4D576 /* Pods_NasaMilkyWayApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA33EBCF6E6BA3328B7BC97 /* Pods_NasaMilkyWayApp.framework */; };
 		E0711F4B218FB1A500428134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711F4A218FB1A500428134 /* AppDelegate.swift */; };
-		E0711F4D218FB1A600428134 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711F4C218FB1A600428134 /* ViewController.swift */; };
+		E0711F4D218FB1A600428134 /* MilkyWayDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0711F4C218FB1A600428134 /* MilkyWayDetailViewController.swift */; };
 		E0711F50218FB1A600428134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0711F4E218FB1A600428134 /* Main.storyboard */; };
 		E0711F52218FB1A600428134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0711F51218FB1A600428134 /* Assets.xcassets */; };
 		E0711F55218FB1A600428134 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0711F53218FB1A600428134 /* LaunchScreen.storyboard */; };
@@ -25,7 +25,7 @@
 		2CF3429BEEF09FADEF850A40 /* Pods-NasaMilkyWayApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NasaMilkyWayApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-NasaMilkyWayApp/Pods-NasaMilkyWayApp.release.xcconfig"; sourceTree = "<group>"; };
 		E0711F47218FB1A500428134 /* NasaMilkyWayApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NasaMilkyWayApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0711F4A218FB1A500428134 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E0711F4C218FB1A600428134 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E0711F4C218FB1A600428134 /* MilkyWayDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilkyWayDetailViewController.swift; sourceTree = "<group>"; };
 		E0711F4F218FB1A600428134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E0711F51218FB1A600428134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0711F54218FB1A600428134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -86,10 +86,10 @@
 		E0711F49218FB1A500428134 /* NasaMilkyWayApp */ = {
 			isa = PBXGroup;
 			children = (
+				E0711F66218FB66200428134 /* DetailScreen */,
 				E0711F61218FB4C400428134 /* MainScreen */,
 				E0711F5C218FB2D200428134 /* Network */,
 				E0711F4A218FB1A500428134 /* AppDelegate.swift */,
-				E0711F4C218FB1A600428134 /* ViewController.swift */,
 				E0711F4E218FB1A600428134 /* Main.storyboard */,
 				E0711F51218FB1A600428134 /* Assets.xcassets */,
 				E0711F53218FB1A600428134 /* LaunchScreen.storyboard */,
@@ -114,6 +114,14 @@
 				E0711F64218FB57D00428134 /* MilkyWayTableViewCell.swift */,
 			);
 			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		E0711F66218FB66200428134 /* DetailScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E0711F4C218FB1A600428134 /* MilkyWayDetailViewController.swift */,
+			);
+			path = DetailScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,7 +250,7 @@
 				E0711F60218FB32800428134 /* NasaResponseObject.swift in Sources */,
 				E0711F65218FB57D00428134 /* MilkyWayTableViewCell.swift in Sources */,
 				E0711F5E218FB2F900428134 /* NetworkManager.swift in Sources */,
-				E0711F4D218FB1A600428134 /* ViewController.swift in Sources */,
+				E0711F4D218FB1A600428134 /* MilkyWayDetailViewController.swift in Sources */,
 				E0711F4B218FB1A500428134 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
